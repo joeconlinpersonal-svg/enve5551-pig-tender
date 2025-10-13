@@ -4,7 +4,7 @@ function categories_ProposedGasPipelines_5(feature, value, size, resolution, lab
                        labelFont, labelFill, bufferColor, bufferWidth,
                        placement) {
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
-                switch(valueStr) {case 'Deep':
+                switch(valueStr) {case 'Deep Shelf (150-500m)':
                     return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(255,255,255,0.6980392156862745)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 5.319999999999999}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -17,7 +17,7 @@ function categories_ProposedGasPipelines_5(feature, value, size, resolution, lab
                               bufferWidth)
     })];
                     break;
-case 'Mid':
+case 'Mid Shelf (150-500m)':
                     return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(255,255,255,0.6980392156862745)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 5.319999999999999}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -30,7 +30,7 @@ case 'Mid':
                               bufferWidth)
     })];
                     break;
-case 'Near':
+case 'Near Shelf (150-500m)':
                     return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(255,255,255,0.6980392156862745)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 5.319999999999999}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
