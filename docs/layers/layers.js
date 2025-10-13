@@ -11,20 +11,20 @@ var wms_layers = [];
                 url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}'
             })
         });
-var format_OuterShelf150400m_1 = new ol.format.GeoJSON();
-var features_OuterShelf150400m_1 = format_OuterShelf150400m_1.readFeatures(json_OuterShelf150400m_1, 
+var format_DeepShelf150400m_1 = new ol.format.GeoJSON();
+var features_DeepShelf150400m_1 = format_DeepShelf150400m_1.readFeatures(json_DeepShelf150400m_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_OuterShelf150400m_1 = new ol.source.Vector({
+var jsonSource_DeepShelf150400m_1 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_OuterShelf150400m_1.addFeatures(features_OuterShelf150400m_1);
-var lyr_OuterShelf150400m_1 = new ol.layer.Vector({
+jsonSource_DeepShelf150400m_1.addFeatures(features_DeepShelf150400m_1);
+var lyr_DeepShelf150400m_1 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_OuterShelf150400m_1, 
-                style: style_OuterShelf150400m_1,
-                popuplayertitle: 'Outer Shelf (150-400m)',
+                source:jsonSource_DeepShelf150400m_1, 
+                style: style_DeepShelf150400m_1,
+                popuplayertitle: 'Deep Shelf (150-400m)',
                 interactive: false,
-                title: '<img src="styles/legend/OuterShelf150400m_1.png" /> Outer Shelf (150-400m)'
+                title: '<img src="styles/legend/DeepShelf150400m_1.png" /> Deep Shelf (150-400m)'
             });
 var format_MidShelf50150m_2 = new ol.format.GeoJSON();
 var features_MidShelf50150m_2 = format_MidShelf50150m_2.readFeatures(json_MidShelf50150m_2, 
@@ -91,7 +91,7 @@ var lyr_ProposedGasPipelines_5 = new ol.layer.Vector({
     <img src="styles/legend/ProposedGasPipelines_5_1.png" /> Mid<br />\
     <img src="styles/legend/ProposedGasPipelines_5_2.png" /> Near<br />' });
 var group_Zones = new ol.layer.Group({
-                                layers: [lyr_OuterShelf150400m_1,lyr_MidShelf50150m_2,lyr_NearShelf050m_3,],
+                                layers: [lyr_DeepShelf150400m_1,lyr_MidShelf50150m_2,lyr_NearShelf050m_3,],
                                 fold: 'open',
                                 title: 'Zones'});
 var group_Pipelines = new ol.layer.Group({
@@ -99,19 +99,19 @@ var group_Pipelines = new ol.layer.Group({
                                 fold: 'close',
                                 title: 'Pipelines'});
 
-lyr_WorldStreetMap_0.setVisible(true);lyr_OuterShelf150400m_1.setVisible(true);lyr_MidShelf50150m_2.setVisible(true);lyr_NearShelf050m_3.setVisible(true);lyr_ExistingGasPipelines_4.setVisible(true);lyr_ProposedGasPipelines_5.setVisible(true);
+lyr_WorldStreetMap_0.setVisible(true);lyr_DeepShelf150400m_1.setVisible(true);lyr_MidShelf50150m_2.setVisible(true);lyr_NearShelf050m_3.setVisible(true);lyr_ExistingGasPipelines_4.setVisible(true);lyr_ProposedGasPipelines_5.setVisible(true);
 var layersList = [lyr_WorldStreetMap_0,group_Zones,lyr_ExistingGasPipelines_4,lyr_ProposedGasPipelines_5];
-lyr_OuterShelf150400m_1.set('fieldAliases', {'fid': 'fid', 'Contour': 'Contour', 'Zone': 'Zone', });
+lyr_DeepShelf150400m_1.set('fieldAliases', {'fid': 'fid', 'Contour': 'Contour', 'Zone': 'Zone', });
 lyr_MidShelf50150m_2.set('fieldAliases', {'fid': 'fid', 'Contour': 'Contour', 'Zone': 'Zone', });
 lyr_NearShelf050m_3.set('fieldAliases', {'fid': 'fid', 'Contour': 'Contour', 'Zone': 'Zone', });
 lyr_ExistingGasPipelines_4.set('fieldAliases', {'fid': 'fid', 'OBJECTID': 'OBJECTID', 'FEATURE_TYPE': 'FEATURE_TYPE', 'NAME': 'NAME', 'STATE': 'STATE', 'OPERATIONAL_STATUS': 'OPERATIONAL_STATUS', 'DATE_DOWNLOADED': 'DATE_DOWNLOADED', 'SOURCE': 'SOURCE', 'LICENSE': 'LICENSE', 'SPATIAL_CONFIDENCE': 'SPATIAL_CONFIDENCE', 'SHAPE_Length': 'SHAPE_Length', 'Zone': 'Zone', 'Length (km)': 'Length (km)', 'Reccomendation': 'Reccomendation', 'Type': 'Type', });
 lyr_ProposedGasPipelines_5.set('fieldAliases', {'fid': 'fid', 'OBJECTID': 'OBJECTID', 'FEATURE_TYPE': 'FEATURE_TYPE', 'NAME': 'NAME', 'LENGTH': 'LENGTH', 'STATE': 'STATE', 'OPERATIONAL_STATUS': 'OPERATIONAL_STATUS', 'DATE_DOWNLOADED': 'DATE_DOWNLOADED', 'SOURCE': 'SOURCE', 'LICENSE': 'LICENSE', 'SPATIAL_CONFIDENCE': 'SPATIAL_CONFIDENCE', 'SHAPE_Length': 'SHAPE_Length', 'Zone': 'Zone', 'Length (km)': 'Length (km)', 'Reccomendation': 'Reccomendation', 'Type': 'Type', });
-lyr_OuterShelf150400m_1.set('fieldImages', {'fid': 'TextEdit', 'Contour': 'Range', 'Zone': 'TextEdit', });
+lyr_DeepShelf150400m_1.set('fieldImages', {'fid': 'TextEdit', 'Contour': 'Range', 'Zone': 'TextEdit', });
 lyr_MidShelf50150m_2.set('fieldImages', {'fid': 'TextEdit', 'Contour': 'Range', 'Zone': 'TextEdit', });
 lyr_NearShelf050m_3.set('fieldImages', {'fid': 'TextEdit', 'Contour': 'Range', 'Zone': 'TextEdit', });
 lyr_ExistingGasPipelines_4.set('fieldImages', {'fid': 'TextEdit', 'OBJECTID': 'TextEdit', 'FEATURE_TYPE': 'TextEdit', 'NAME': 'TextEdit', 'STATE': 'TextEdit', 'OPERATIONAL_STATUS': 'TextEdit', 'DATE_DOWNLOADED': 'TextEdit', 'SOURCE': 'TextEdit', 'LICENSE': 'TextEdit', 'SPATIAL_CONFIDENCE': 'TextEdit', 'SHAPE_Length': 'TextEdit', 'Zone': 'TextEdit', 'Length (km)': '', 'Reccomendation': '', 'Type': '', });
 lyr_ProposedGasPipelines_5.set('fieldImages', {'fid': 'TextEdit', 'OBJECTID': 'TextEdit', 'FEATURE_TYPE': 'TextEdit', 'NAME': 'TextEdit', 'LENGTH': 'TextEdit', 'STATE': 'TextEdit', 'OPERATIONAL_STATUS': 'TextEdit', 'DATE_DOWNLOADED': 'TextEdit', 'SOURCE': 'TextEdit', 'LICENSE': 'TextEdit', 'SPATIAL_CONFIDENCE': 'TextEdit', 'SHAPE_Length': 'TextEdit', 'Zone': 'TextEdit', 'Length (km)': '', 'Reccomendation': '', 'Type': '', });
-lyr_OuterShelf150400m_1.set('fieldLabels', {'fid': 'hidden field', 'Contour': 'hidden field', 'Zone': 'header label - always visible', });
+lyr_DeepShelf150400m_1.set('fieldLabels', {'fid': 'hidden field', 'Contour': 'hidden field', 'Zone': 'header label - always visible', });
 lyr_MidShelf50150m_2.set('fieldLabels', {'fid': 'hidden field', 'Contour': 'hidden field', 'Zone': 'hidden field', });
 lyr_NearShelf050m_3.set('fieldLabels', {'fid': 'hidden field', 'Contour': 'hidden field', 'Zone': 'hidden field', });
 lyr_ExistingGasPipelines_4.set('fieldLabels', {'fid': 'hidden field', 'OBJECTID': 'hidden field', 'FEATURE_TYPE': 'hidden field', 'NAME': 'inline label - always visible', 'STATE': 'hidden field', 'OPERATIONAL_STATUS': 'hidden field', 'DATE_DOWNLOADED': 'hidden field', 'SOURCE': 'hidden field', 'LICENSE': 'hidden field', 'SPATIAL_CONFIDENCE': 'hidden field', 'SHAPE_Length': 'hidden field', 'Zone': 'inline label - always visible', 'Length (km)': 'inline label - always visible', 'Reccomendation': 'inline label - always visible', 'Type': 'inline label - always visible', });

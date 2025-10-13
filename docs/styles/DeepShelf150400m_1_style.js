@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_OuterShelf150400m_1 = function(feature, resolution){
+var style_DeepShelf150400m_1 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
